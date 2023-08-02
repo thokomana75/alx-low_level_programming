@@ -28,6 +28,7 @@ int _strlen_recursion(char *s)
 		return (0);
 	return (1 + _strlen_recursion(s + 1));
 }
+
 /**
  * check_pal - checks the characters recursively for palindrome
  * @s: string to check
@@ -38,7 +39,7 @@ int _strlen_recursion(char *s)
  */
 int check_pal(char *s, int i, int len)
 {
-	if (*(s + 1) != *(s + len - 1))
+	if (*(s + i) != *(s + len - 1))
 		return (0);
 	if (i >= len)
 		return (1);
