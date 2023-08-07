@@ -19,13 +19,14 @@ char *argstostr(int ac, char **av)
 		for (n = 0; av[i][n]; n++)
 			l++;
 	}
+	l += ac;
 
 	str = malloc(sizeof(char) * l + 1);
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-	for (n = 0; i < av[i][n]; n++)
+	for (n = 0; av[i][n]; n++)
 	{
 		str[r] = av[i][n];
 		r++;
